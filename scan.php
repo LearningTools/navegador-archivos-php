@@ -1,7 +1,6 @@
 <?php
 
-$dir = "files";
-
+$dir = 'files';
 // Run the recursive function esapcio 
 
 $response = scan($dir);
@@ -60,7 +59,7 @@ function scan($dir){
 header('Content-type: application/json');
 
 echo json_encode(array(
-	"name" => "files",
+	"name" => "$dir",
 	"type" => "folder",
 	"path" => $dir,
 	"items" => $response
